@@ -1346,3 +1346,49 @@ h2 {
   background: #c99127;
   color: #1b1b18;
 }
+/* Ajuste de encuadre del hero para que la imagen familiar no se recorte en exceso. */
+.hero {
+  min-height: 92vh;
+}
+
+.hero-image {
+  object-position: center center;
+}
+
+@media (max-width: 860px) {
+  .hero {
+    min-height: 680px;
+    align-items: end;
+    padding-top: 96px;
+    padding-bottom: 42px;
+    background: #081425;
+  }
+
+  .hero-image {
+    height: auto;
+    max-height: 52%;
+    object-fit: contain;
+    object-position: top center;
+    background: #081425;
+  }
+
+  .hero-overlay {
+    background:
+      linear-gradient(180deg, rgba(8, 20, 37, 0.08) 0%, rgba(8, 20, 37, 0.28) 38%, rgba(8, 20, 37, 0.94) 68%, rgba(8, 20, 37, 0.98) 100%);
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero {
+    min-height: 640px;
+    padding-top: 92px;
+  }
+
+  .hero-image {
+    max-height: 46%;
+  }
+}
